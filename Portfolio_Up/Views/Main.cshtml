@@ -15,17 +15,66 @@
 
     <title></title>
 
-    @*CSS*@
+    <!--CSS-->
     <link href="~/Content/style.css" rel="stylesheet" />
     <link href="~/Content/uikit.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.css" rel="stylesheet" />
 
 </head>
 <body>
+    <a class="uk-overlay-panel uk-position-top-right uk-icon"uk-parallax="target: #fullpage; blur:10;" uk-icon="icon: chevron-down; ratio: 3" uk-sticky href="#menu-modal" uk-toggle></a>
+    <div id="menu-modal" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog">
+            <button class="uk-modal-close-default w" type="button" uk-icon="icon: close; ratio: 2" ></button>
+            <div class="uk-flex-middle" >
+                <div class="uk-background gradient-menu" uk-height-viewport>
+                    <div id="nav-primary">
+                        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                            <li class="uk-text-lead uk-position-left">Radu Dobos</li>
+                            <li class="uk-nav-divider"></li>
+                            <li class="uk-active"><a href="#">Active</a></li>
+
+                            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: table"></span> Item</a></li>
+                            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Item</a></li>
+
+                            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
+                        </ul>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+  
     
+    <div id="fullpage">
+        <div class="section fp-auto-height-responsive" data-anchor="section-1">
+            <div uk-slideshow>
+                <ul class="uk-slideshow-items">
+                    <li>
+                        <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
+                            <img src="~/Media/bg.jpeg" alt="" uk-cover>
+                        </div>
+                        <div class="uk-overlay-panel uk-light uk-position-center">
+                            <p class="uk-text-lead">
+                                <h1>Hello, I'm <span class="highlight">Radu Dobos</span> .</h1>
+                                <h2>I am a Web Developer</h2>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <span id="movedown" class="uk-overlay-panel uk-position-bottom-center uk-icon-button" uk-icon="icon: chevron-down; ratio: 3"></span>
+            </div>
+
+        </div>
+        <div class="section" data-anchor="section-2">Some section</div>
+        <div class="section" data-anchor="section-3">Some section</div>
+
+    </div>
 
 
-    @*Javascript Files*@
+    <!--Javascript Files-->
     <script src="~/Scripts/uikit.js"></script>
     <script src="~/Scripts/uikit-icons.js"></script>
     <script src="~/Scripts/jquery-3.0.0.js"></script>
