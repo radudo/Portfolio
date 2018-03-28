@@ -23,15 +23,28 @@ h1 {
     bottom: 15%;
     z-index:999;
 }
-.gradient-menu {
-    background: -webkit-gradient(linear, top left, bottom left, from(#92a1ca), to(#76c2bd));
-    background: -webkit-linear-gradient(#92a1ca, #76c2bd);
-    background: linear-gradient(#92a1ca,#76c2bd);
-}
-.uk-background.gradient-menu {
-    opacity:0.93;
+.uk-modal-dialog {
+    background: -webkit-gradient(linear, top left, bottom left, from(rgb(146,161,202,0.93)), to(rgb(118,194,189,0.93))) !important;
+    background: -webkit-linear-gradient(#92a1ca, #76c2bd ) !important;
+    background: linear-gradient(#92a1ca ,#76c2bd ) !important;
 }
 
+.logo {
+    width: auto;
+    max-width: none;
+    display: block;
+    line-height: 22px;
+    font-size: 32px;
+    letter-spacing: -1.5px;
+    color: #444;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    color:white;
+   left:15px !important;
+   top:20px !important;
+}
+
+}
 .w{
     color:white !important;
 }
@@ -47,4 +60,14 @@ h1 {
 .uk-nav-header{
     font-size:2em!important;
     color:whitesmoke!important;
+}
+
+.uk-iconnav > * > *{
+    color:white !important;
+}
+.uk-overlay-panel.uk-position-top-right.uk-icon.w.uk-sticky.uk-sticky-fixed {
+    color: white !important;
+    width: 45px !important;
+    top: 10px !important;
+    right: 10px !important;
 }
