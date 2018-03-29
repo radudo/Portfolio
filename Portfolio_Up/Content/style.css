@@ -13,7 +13,7 @@ h1 {
     color: rgba(255,255,255,.7) !important;
     font-size: 1.73em !important;
     font-weight: 100;
-    margin: -10px 30px 10px;
+    margin-top:6%;
     line-height: 0!important;
 }
 .highlight {
@@ -28,7 +28,11 @@ h1 {
     background: -webkit-linear-gradient(#92a1ca, #76c2bd ) !important;
     background: linear-gradient(#92a1ca ,#76c2bd ) !important;
 }
-
+#section-1 {
+    background-image: url('../Media/bg.jpeg');
+    background-size:cover;
+  
+}
 .logo {
     width: auto;
     max-width: none;
@@ -43,7 +47,9 @@ h1 {
    left:15px !important;
    top:20px !important;
 }
-
+uk-overlay-panel.uk-position-center.uk-light{
+    z-index:999!important;
+}
 }
 .w{
     color:white !important;
@@ -70,4 +76,12 @@ h1 {
     width: 45px !important;
     top: 10px !important;
     right: 10px !important;
+}
+
+
+#b{
+    overflow:hidden;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: white !important;
 }

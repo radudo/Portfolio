@@ -22,29 +22,27 @@
 
 </head>
 <body>
-    <a class="uk-overlay-panel uk-position-top-right uk-icon w " uk-sticky="top" uk-icon="icon: menu; ratio: 2"  href="#menu-modal" uk-toggle>
-   
+    <a class="uk-overlay-panel uk-position-top-right uk-icon w " uk-sticky="top" uk-icon="icon: menu; ratio: 2" href="#menu-modal" uk-toggle>
+
     </a>
-   
+
     <div id="menu-modal" class="uk-modal-full" uk-modal>
         <div class="uk-modal-dialog">
 
-            <button class="uk-modal-close-default w" type="button" uk-icon="icon: close; ratio: 2">
-            
-            </button>
+            <button class="uk-modal-close-default w" type="button" uk-icon="icon: close; ratio: 2"></button>
             <div class=" uk-position-left logo"><span class="highlight">R</span>adu Dobos</div>
             <div class="uk-flex-middle ">
                 <div class="uk-background gradient-menu" uk-height-viewport>
                     <div id="nav-primary">
-                        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical uk-position-medium uk-position-center">
+                        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical uk-position-medium uk-position-center" id="myMenu">
 
 
-                            <li class="uk-active"><a href="#">Menu</a></li>
+                            <li data-menuanchor="firstPage" class="uk-active" id="first" ><a href="#">Intro</a></li>
 
-                            <li><a href="#"> Item</a></li>
-                            <li><a href="#"> Item</a></li>
+                            <li data-menuanchor="secondPage" id="second"><a href="#">About</a></li>
+                            <li data-menuanchor="thirdPage" id="third"><a href="#">Projects</a></li>
 
-                            <li><a href="#"> Item</a></li>
+  
                         </ul>
 
                     </div>
@@ -57,30 +55,36 @@
             </div>
 
         </div>
-        </div>
-  
-    
+    </div>
+
+
     <div id="fullpage">
-        <div class="section fp-auto-height-responsive" data-anchor="section-1">
-            <div uk-slideshow>
-                <ul class="uk-slideshow-items">
-                    <li>
-                        <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-                            <img src="~/Media/bg.jpeg" alt="" uk-cover>
-                        </div>
-                        <div class="uk-overlay-panel uk-light uk-position-center">
-                            <p class="uk-text-lead">
-                                <h1>Hello, I'm <span class="highlight">Radu Dobos</span> .</h1>
-                                <h2>I am a Web Developer</h2>
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-                <span id="movedown" class="uk-overlay-panel uk-position-bottom-center uk-icon-button" uk-icon="icon: chevron-down; ratio: 3"></span>
+        <div class="section" data-anchor="section-1" id="section-1">
+
+
+
+
+
+            <div class="uk-overlay-panel uk-position-center uk-light " style=" z-index:999!important;">
+                <div class=" uk-overlay-panel ">
+                    <h1 uk-parallax="target: #section-1; y: 200; easing: 0" >Hello, I'm <span class="highlight">Radu Dobos</span> .</h1>
+                    <h2>I am a Web Developer. <span class="uk-h2" id="msg"></span></h2>
+                </div>
             </div>
 
+
+            <span id="movedown" class="uk-overlay-panel uk-position-bottom-center uk-icon-button" uk-icon="icon: chevron-down; ratio: 3">
+
+            </span>
+            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left" id="b">
+                <img src="~/Media/bg.jpeg" alt="" uk-cover uk-background-contain>
+            </div>
+
+
         </div>
-        <div class="section" data-anchor="section-2">Some section</div>
+        <div class="section " data-anchor="section-2">
+
+        </div>
         <div class="section" data-anchor="section-3">Some section</div>
 
     </div>
@@ -95,5 +99,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/scrolloverflow.js"></script>
     <script src="~/Scripts/initializer.js"></script>
 
+   
 </body>
 </html>                               

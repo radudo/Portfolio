@@ -5,10 +5,15 @@
         menu: '#myMenu',
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['First page', 'Second page', 'Third and last page'],
+        navigationTooltips: ['Intro', 'About', 'Contact'],
         //Sections
-        sectionsColor: ['#1bbc9b', '#4BBFC3'],
+        sectionsColor: ['#1bbc9b', '#4BBFC3','orange'],
+        fitToSection: true,
+        dragAndMove: true,
+        recordHistory: true,
 
+
+       
 
     });
 
@@ -16,11 +21,42 @@
     $.fn.fullpage.moveSectionDown();
     });
 
-    $(document).ready(function () {
-        $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function () {
-            $(this).toggleClass('open');
-        });
+    UIkit.util.on('#first', 'click', function (e) {
+      
+        e.preventDefault();
+        e.target.blur();
+        $.fn.fullpage.moveTo(1, 0);
+        UIkit.modal("#menu-modal").hide();
     });
+
+    UIkit.util.on('#second', 'click', function (e) {
+
+        e.preventDefault();
+        e.target.blur();
+        $.fn.fullpage.moveTo(2, 0);
+        UIkit.modal("#menu-modal").hide();
+    });
+
+    UIkit.util.on('#third', 'click', function (e) {
+
+        e.preventDefault();
+        e.target.blur();
+        $.fn.fullpage.moveTo(3, 0);
+        UIkit.modal("#menu-modal").hide();
+    });
+    var showText = function (target, message, index, interval) {
+        if (index < message.length) {
+            $(target).append(message[index++]);
+            setTimeout(function () { showText(target, message, index, interval); }, interval);
+        }
+    }
+    $(function () {
+       
+        showText("#msg", "Living in Denmark, Aarhus .", 0, 80);
+
+    });
+
+  
 
 
 
