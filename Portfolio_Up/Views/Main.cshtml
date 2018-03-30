@@ -25,66 +25,81 @@
     <a class="uk-overlay-panel uk-position-top-right uk-icon w " uk-sticky="top" uk-icon="icon: menu; ratio: 2" href="#menu-modal" uk-toggle>
 
     </a>
-
-    <div id="menu-modal" class="uk-modal-full" uk-modal>
-        <div class="uk-modal-dialog">
-
-            <button class="uk-modal-close-default w" type="button" uk-icon="icon: close; ratio: 2"></button>
-            <div class=" uk-position-left logo"><span class="highlight">R</span>adu Dobos</div>
-            <div class="uk-flex-middle ">
-                <div class="uk-background gradient-menu" uk-height-viewport>
-                    <div id="nav-primary">
-                        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical uk-position-medium uk-position-center" id="myMenu">
-
-
-                            <li data-menuanchor="firstPage" class="uk-active" id="first" ><a href="#">Intro</a></li>
-
-                            <li data-menuanchor="secondPage" id="second"><a href="#">About</a></li>
-                            <li data-menuanchor="thirdPage" id="third"><a href="#">Projects</a></li>
-
-  
-                        </ul>
-
-                    </div>
-                </div>
-                <ul class="uk-iconnav uk-position-large uk-position-bottom-right">
-                    <li><a href="#" uk-icon="icon: linkedin"></a></li>
-                    <li><a href="#" uk-icon="icon: github"></a></li>
-                    <li><a href="#" uk-icon="icon: instagram"></a></li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
-
+    @Html.Partial("modal")
     <div id="fullpage">
         <div class="section" data-anchor="section-1" id="section-1">
-
-
-
-
-
-            <div class="uk-overlay-panel uk-position-center uk-light " style=" z-index:999!important;">
-                <div class=" uk-overlay-panel ">
-                    <h1 uk-parallax="target: #section-1; y: 200; easing: 0" >Hello, I'm <span class="highlight">Radu Dobos</span> .</h1>
-                    <h2>I am a Web Developer. <span class="uk-h2" id="msg"></span></h2>
-                </div>
-            </div>
-
-
-            <span id="movedown" class="uk-overlay-panel uk-position-bottom-center uk-icon-button" uk-icon="icon: chevron-down; ratio: 3">
-
-            </span>
-            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left" id="b">
-                <img src="~/Media/bg.jpeg" alt="" uk-cover uk-background-contain>
-            </div>
-
-
+            @Html.Partial("section1")
         </div>
         <div class="section " data-anchor="section-2">
+            <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+                <div class="uk-overflow-hidden">
+                    <div class="uk-background-cover uk-animation-reverse uk-transform-origin-top-right"
+                         uk-scrollspy="cls: uk-animation-kenburns;  queued: true; " style="background-image: url('../Media/me2.jpg');" uk-height-viewport id="imgab">
+                    </div>
+                </div>
+                <div class="uk-padding-large uk-padding-remove-top" id="about">
+                
+                    <h2 class="uk-heading-large uk-margin-large-bottom">Who's this guy?</h2>
 
+                    <p class="uk-text-medium" id="fade">
+                        I am a 21 years old,
+                        Web Developer.
+                        Passionate about Back&Front-end development. For the last two years and a half of my professional and scholar career, I have obtained extensive knowledge within various fields such as .Net Development, various Frameworks, Virtual and Augumented reality, iOS, UX/UI Design, Business and Communication.
+
+                        Feel free to take a look at my latest projects on the
+                        portfolio page
+                        ...
+
+
+                        <div id="chart">
+
+                            <div class="uk-clearfix cz">
+                                <div class="uk-float-right">
+                                    <div class="uk-text-large w">Advanced</div>
+                                </div>
+                                <div class="uk-float-left">
+                                    <div class="uk-text-large w">NOOB</div>
+                                </div>
+                            </div>
+
+                            <div class="skillbar clearfix " data-percent="90%">
+                                <div class="skillbar-title" style="background: #673AB7;"><span>CSHTML</span></div>
+                                <div class="skillbar-bar" style="background: #311B92;"></div>
+                                <div class="skill-bar-percent">95%</div>
+                            </div>
+                            <div class="skillbar clearfix " data-percent="60%">
+                                <div class="skillbar-title" style="background:#647687;"><span>Javascript</span></div>
+                                <div class="skillbar-bar" style="background: #e3c800;"></div>
+                                <div class="skill-bar-percent">64%</div>
+                            </div>
+                            <div class="skillbar clearfix " data-percent="80%">
+                                <div class="skillbar-title" style="background:#F50057;"><span>CSS</span></div>
+                                <div class="skillbar-bar" style="background: #DD2C00;"></div>
+                                <div class="skill-bar-percent">82%</div>
+                            </div>
+                            <div class="skillbar clearfix " data-percent="47%">
+                                <div class="skillbar-title" style="background:#000000;"><span>SWIFT</span></div>
+                                <div class="skillbar-bar" style="background: #1ba1e2;"></div>
+                                <div class="skill-bar-percent">47%</div>
+                            </div>
+                            <div class="skillbar clearfix " data-percent="75%">
+                                <div class="skillbar-title" style="background:#60a917;"><span>C#</span></div>
+                                <div class="skillbar-bar" style="background: #6a00ff;"></div>
+                                <div class="skill-bar-percent">75%</div>
+                            </div>
+                            <div class="skillbar clearfix " data-percent="78%">
+                                <div class="skillbar-title" style="background:#21759b ;"><span>.NET</span></div>
+                                <div class="skillbar-bar" style="background: #a20025;"></div>
+                                <div class="skill-bar-percent">78%</div>
+                            </div>
+
+                        </div>
+                    </p>
+                </div>
+            </div>
+            
         </div>
+       
         <div class="section" data-anchor="section-3">Some section</div>
 
     </div>
@@ -97,8 +112,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/jquery.easings.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/scrolloverflow.js"></script>
-    <script src="~/Scripts/initializer.js"></script>
 
-   
+    <script src="~/Scripts/initializer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+
 </body>
 </html>                               
