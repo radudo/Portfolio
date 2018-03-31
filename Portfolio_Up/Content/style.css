@@ -54,6 +54,9 @@ uk-overlay-panel.uk-position-center.uk-light{
 .w{
     color:white !important;
 }
+.w h3{
+    color: white !important;
+}
 
 .uk-nav-primary > li > a {
     color: white !important;
