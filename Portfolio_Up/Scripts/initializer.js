@@ -23,6 +23,7 @@
                     }, 2000);
 
                 });
+              
 
                
             }
@@ -31,7 +32,7 @@
 
         onLeave: function (index, nextIndex, direction) {
             if (nextIndex === 2) {
-                $('#fade').addClass('uk-animation-fade');
+          
                 $.when(
                     $('#about').addClass('uk-animation-slide-right').delay(2000).promise()
                 ).done(function () {
@@ -48,16 +49,16 @@
                        
                     });
 
-                
-
             } else if (direction === 'up' || direction === 'down') {
                 //$('#fade').addClass('uk-animation-reverse');
                 //$('#about').addClass('uk-animation-reverse');
                 //$('#sk').addClass('uk-animation-reverse');
             }
 
+            
+
             if (index === 2) {
-                $('#fade').removeClass('uk-animation-fade uk-animation-reverse');
+
                 $('#about').removeClass('uk-animation-slide-right uk-animation-reverse');
                 $.when(
                     $('#sk').removeClass('uk-hidden').promise()
@@ -120,7 +121,7 @@
        
         showText("#msg", "Living in Denmark, Aarhus .", 0, 80);
         var fun = $.when(
-            $(function () { showText("#performance", "Driven By Performance", 0, 60) }).delay(3000).promise()
+            $(function () { showText("#performance", "Driven By Performance", 0, 60) }).delay(3500).promise()
               ).done(function () {
                   $(function () { showText("#tailor", "Tailor-Made For User Needs", 0, 60) }).delay(1000).promise()
                     .done(function () {
