@@ -71,6 +71,10 @@ uk-overlay-panel.uk-position-center.uk-light{
     color:whitesmoke!important;
 }
 
+.uk-overlay-primary{
+    background: rgba(34, 34, 34, 1)!important;
+}
+
 .uk-iconnav > * > *{
     color:white !important;
 }
@@ -106,7 +110,7 @@ uk-overlay-panel.uk-position-center.uk-light{
     margin-bottom: 15px;
     width: 100%;
     background: #eee;
-    height: 35px;
+    height: 20px;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -129,7 +133,7 @@ uk-overlay-panel.uk-position-center.uk-light{
     left: 0;
     width: 110px;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 9px;
     color: #ffffff;
     background: #6adcfa;
     -webkit-border-top-left-radius: 3px;
@@ -144,8 +148,8 @@ uk-overlay-panel.uk-position-center.uk-light{
         display: block;
         background: rgba(0, 0, 0, 0.1);
         padding: 0 20px;
-        height: 35px;
-        line-height: 35px;
+        height: 20px;
+        line-height: 20px;
         -webkit-border-top-left-radius: 3px;
         -webkit-border-bottom-left-radius: 3px;
         -moz-border-radius-topleft: 3px;
@@ -155,7 +159,7 @@ uk-overlay-panel.uk-position-center.uk-light{
     }
 
 .skillbar-bar {
-    height: 35px;
+    height: 20px;
     width: 0px;
     background: #6adcfa;
     border-radius: 3px;
@@ -168,8 +172,8 @@ uk-overlay-panel.uk-position-center.uk-light{
     right: 10px;
     top: 0;
     font-size: 11px;
-    height: 35px;
-    line-height: 35px;
+    height: 20px;
+    line-height: 20px;
     color: #ffffff;
     color: rgba(0, 0, 0, 0.4);
 }

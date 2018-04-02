@@ -1,25 +1,27 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+<!--
+      <div class="uk-article uk-padding-large">
+      <h1 class="uk-article-title ">Projects+</h1>
+      <p class="uk-text-lead">
+          @Html.Partial("codingAnimation")
+      </p>
+  </div>
+  -->
 
-<div class="uk-container">
-    <div class="uk-grid-small uk-child-width-1-2 uk-padding" uk-grid>
-        <div class="uk-article uk-padding-large">
-            <h1 class="uk-article-title ">Projects+</h1>
-            <p class="uk-text-lead">
-                @Html.Partial("codingAnimation")
-            </p>
-        </div>
-        <div>
-            <div class="uk-grid-collapse uk-child-width-1-3@m uk-text-center" uk-grid>
-                <div>
-                    <div class="uk-background-muted uk-padding">Item</div>
-                </div>
-                <div>
-                    <div class="uk-background-primary uk-padding uk-light">Item</div>
-                </div>
-                <div>
-                    <div class="uk-background-primary uk-padding uk-light">Item</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
+
+
+
+<div class="uk-position-large uk-position-top-center "><h1 class="uk-heading-hero w">Projects+</h1></div>
+<div class="uk-position-cover uk-overlay uk-overlay-light uk-flex uk-flex-center uk-flex-middle">
+    @Html.Partial("codingAnimation")
+    <h1 class="uk-hero-text uk-position-center uk-position-top">
+        Page
+        Under Construction
+    </h1>
+    @Html.Partial("codingAnimation")
+</div>
+
+
+
+
+

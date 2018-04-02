@@ -7,7 +7,7 @@
         navigationPosition: 'right',
         navigationTooltips: ['Intro', 'About', 'Contact'],
         //Sections
-        sectionsColor: ['#1bbc9b', '#2c3e50','orange'],
+        sectionsColor: ['#1bbc9b', '#2c3e50','#1d1d1d'],
         fitToSection: true,
         dragAndMove: true,
         recordHistory: true,
@@ -120,21 +120,28 @@
     $(function () {
        
         showText("#msg", "Living in Denmark, Aarhus .", 0, 80);
-        var fun = $.when(
-            $(function () { showText("#performance", "Driven By Performance", 0, 60) }).delay(3500).promise()
-              ).done(function () {
-                  $(function () { showText("#tailor", "Tailor-Made For User Needs", 0, 60) }).delay(1000).promise()
-                    .done(function () {
-                        $(function () { showText("#care", "Code Carefuly Built", 0, 60) }).promise()
-                    })
-            });
+        //var fun = $.when(
+        //    $(function () { showText("#performance", "Driven By Performance", 0, 60) }).delay(3500).promise()
+        //      ).done(function () {
+        //          $(function () { showText("#tailor", "Tailor-Made For User Needs", 0, 60) }).delay(1000).promise()
+        //            .done(function () {
+        //                $(function () { showText("#care", "Code Carefuly Built", 0, 60) }).promise()
+        //            })
+        //    });
 
         //;
 
     });
 
   //Chart
-
+    $("#project").hover(
+        function () {
+            $(this).addClass('uk-animation-fade').css("background-image", "url('../Media/images.jpg')");
+        },
+        function () {
+            $(this).css("background", "black");
+        }
+    );
    
 });
 
