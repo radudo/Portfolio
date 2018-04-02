@@ -1,10 +1,38 @@
 ﻿
+
+@media only screen and (max-width: 960px) {
+    #section-1 h1 {
+        font-size: 1.8em !important;
+        font-family: arial,helvetica;
+        margin: 0;
+        padding: 0;
+        line-height: 0.3 !important;
+    }
+    #section-1 h2 {
+        color: rgba(255,255,255,.7) !important;
+        font-size: 1.0em !important;
+        font-weight: 100;
+        margin-top: 10%;
+        line-height: 0.5em !important;
+    }
+    #section-1 h3 {
+        color: rgba(255,255,255,.8) !important;
+        font-size: 1.2em !important;
+        font-weight: 100;
+        margin-top: 6%;
+        line-height: 0.5em !important;
+    }
+}
+
+#section-1 h1 {
+   font-weight:100 !important;
+}
 h1 {
     font-size: 5em !important;
     font-family: arial,helvetica;
     margin: 0;
     padding: 0;
-    line-height:0 !important;
+    line-height: 0 !important;
 }
 .uk-h1{
     line-height:0 !important;
@@ -100,14 +128,20 @@ uk-overlay-panel.uk-position-center.uk-light{
     color: white !important;
 }
 
-
+.blur::before {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
 
 /*Skill Bar CSS*/
 
 .skillbar {
     position: relative;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     width: 100%;
     background: #eee;
     height: 20px;

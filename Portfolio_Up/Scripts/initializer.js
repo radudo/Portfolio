@@ -7,7 +7,7 @@
         navigationPosition: 'right',
         navigationTooltips: ['Intro', 'About', 'Contact'],
         //Sections
-        sectionsColor: ['#1bbc9b', '#2c3e50','#1d1d1d'],
+        sectionsColor: ['#1bbc9b', '#2f3542','#1d1d1d'],
         fitToSection: true,
         dragAndMove: true,
         recordHistory: true,
