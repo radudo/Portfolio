@@ -322,6 +322,7 @@
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\scrolloverflow.js" />
     <Content Include="Scripts\uikit-icons.js" />
     <Content Include="Scripts\uikit-icons.min.js" />
     <Content Include="Scripts\uikit.js" />

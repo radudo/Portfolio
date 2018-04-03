@@ -5,13 +5,13 @@
         menu: '#myMenu',
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Intro', 'About', 'Contact'],
+        navigationTooltips: ['Intro', 'About', 'Projects'],
         //Sections
         sectionsColor: ['#1bbc9b', '#2f3542','#1d1d1d'],
         fitToSection: true,
-        dragAndMove: true,
         recordHistory: true,
         setLocAnchors: true,
+        scrollOverflow: true,
 
         afterLoad: function (anchorLink, index) {
             var loadedSection = $(this);
@@ -27,8 +27,10 @@
 
                
             }
+        
             //$('#fade').addClass('uk-animation-fade');
         },
+        
 
         onLeave: function (index, nextIndex, direction) {
             if (nextIndex === 2) {
@@ -53,8 +55,9 @@
                 //$('#fade').addClass('uk-animation-reverse');
                 //$('#about').addClass('uk-animation-reverse');
                 //$('#sk').addClass('uk-animation-reverse');
+               
             }
-
+            
             
 
             if (index === 2) {
@@ -67,8 +70,9 @@
                         .done(function () {
                             $('#sk2').removeClass('uk-hidden ').promise()
                         })
-                });
-               
+                    });
+
+         
 
               
             }
@@ -134,14 +138,7 @@
     });
 
   //Chart
-    $("#project").hover(
-        function () {
-            $(this).addClass('uk-animation-fade').css("background-image", "url('../Media/images.jpg')");
-        },
-        function () {
-            $(this).css("background", "black");
-        }
-    );
+
    
 });
 
