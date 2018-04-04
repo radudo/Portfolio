@@ -23,8 +23,11 @@
         line-height: 0.5em !important;
     }
 }
+.lh{
+    line-height:1.2!important;
+}
 
-#section-1 h1 {
+    #section-1 h1 {
    font-weight:100 !important;
 }
 h1 {
