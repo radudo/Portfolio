@@ -20,16 +20,16 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Umbraco.Web.PublishedContentModels
 {
-	/// <summary>Projects</summary>
-	[PublishedContentModel("project")]
-	public partial class Project : PublishedContentModel
+	/// <summary>project item</summary>
+	[PublishedContentModel("projectItem")]
+	public partial class ProjectItem : PublishedContentModel
 	{
 #pragma warning disable 0109 // new is redundant
-		public new const string ModelTypeAlias = "project";
+		public new const string ModelTypeAlias = "projectItem";
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 #pragma warning restore 0109
 
-		public Project(IPublishedContent content)
+		public ProjectItem(IPublishedContent content)
 			: base(content)
 		{ }
 
@@ -40,45 +40,9 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 #pragma warning restore 0109
 
-		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Project, TValue>> selector)
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ProjectItem, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Big Image
-		///</summary>
-		[ImplementPropertyType("bigImage")]
-		public IPublishedContent BigImage
-		{
-			get { return this.GetPropertyValue<IPublishedContent>("bigImage"); }
-		}
-
-		///<summary>
-		/// Full Description
-		///</summary>
-		[ImplementPropertyType("fullDescription")]
-		public IHtmlString FullDescription
-		{
-			get { return this.GetPropertyValue<IHtmlString>("fullDescription"); }
-		}
-
-		///<summary>
-		/// Image
-		///</summary>
-		[ImplementPropertyType("image")]
-		public IPublishedContent Image
-		{
-			get { return this.GetPropertyValue<IPublishedContent>("image"); }
-		}
-
-		///<summary>
-		/// Prototype image
-		///</summary>
-		[ImplementPropertyType("prototypeImage")]
-		public IPublishedContent PrototypeImage
-		{
-			get { return this.GetPropertyValue<IPublishedContent>("prototypeImage"); }
 		}
 
 		///<summary>
