@@ -1,0 +1,51 @@
+﻿@inherits UmbracoViewPage<Portfolio_Up.Models.Contact>
+@{
+    Layout = null;
+}
+
+
+@using (Html.BeginUmbracoForm("SubmitForm", "ContactSurface", FormMethod.Post, new { @class = "uk-fieldset uk-margin-left uk-margin-right uk-padding-large uk-height-viewport" }))
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-group">
+        <div class="col-xs-3">
+            @Html.LabelFor(m => m.Subject, new { @class = "uk-legend w" })
+        </div>
+        <div class="col-xs-9">
+            @Html.TextBoxFor(m => m.Subject, new { @class = "uk-input", @type = "text", @placeholder = "Please Enter A Subject" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-3">
+            @Html.LabelFor(m => m.Name, new { @class = "uk-legend w" })
+        </div>
+        <div class="col-xs-9">
+            @Html.TextBoxFor(m => m.Name, new { @class = "uk-input", @type = "text", @placeholder = "Enter Your Name" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-xs-3">
+            @Html.LabelFor(m => m.Email, new { @class = "uk-legend w" })
+        </div>
+        <div class="col-xs-9">
+            @Html.TextBoxFor(m => m.Email, new { @class = "uk-input", @type = "text", @placeholder = "Your Email Address" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-3">
+            @Html.LabelFor(m => m.Message, new { @class = "uk-legend w" })
+        </div>
+        <div class="col-xs-9">
+            @Html.TextAreaFor(m => m.Message, new { @class = "uk-textarea", @rows = "5", @placeholder = "Let's talk!" })
+        </div>
+    </div>
+    <button class="uk-button uk-button-secondary">Send</button>
+    <div class="form-group ">
+        @Html.ValidationSummary("Please Fix The Following Errors", new { @class = "uk-text-warning" })
+    </div>
+}

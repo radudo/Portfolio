@@ -277,6 +277,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\coding.css" />
     <Content Include="Content\device-mockups.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\uikit-rtl.css" />
     <Content Include="Content\uikit-rtl.min.css" />
@@ -330,6 +331,8 @@
     <Content Include="Scripts\jquery-3.0.0.min.js" />
     <Content Include="Scripts\jquery-3.0.0.slim.js" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\jquery.slimscroll.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\particles.min.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
@@ -371,6 +374,11 @@
     <Content Include="Views\Partials\screens.cshtml" />
     <Content Include="Views\MacroPartials\projectListing.cshtml" />
     <Content Include="Views\Partials\bganimated.cshtml" />
+    <Content Include="Views\Partials\Contact\_Contact.cshtml" />
+    <Content Include="Views\MacroPartials\Form.cshtml" />
+    <Content Include="Views\MacroPartials\contactSec.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Partials\modal_form.cshtml" />
     <None Include="Web.LIVE.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -380,9 +388,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ContactSurfaceController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Contact.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -421,8 +431,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\ContactFormSurface\" />
+    <Folder Include="Views\ContactSurface\" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />

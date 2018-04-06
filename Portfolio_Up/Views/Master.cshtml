@@ -6,74 +6,91 @@
     /**/
 
     Layout = null;
-}
+    if (TempData["ContactSuccess"] != null && (bool)TempData["ContactSuccess"])
+    {
+        <script>
+            UIkit.notification({
+                message: 'my-message!',
+                status: 'primary',
+                pos: 'top-right',
+                timeout: 5000
+            });
+        </script>
+        }
+    }
 
-<!DOCTYPE html>
-<html>
+    <!DOCTYPE html>
+    <html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="@Umbraco.Field("metaDescription")">
-    <meta name="keywords" content="@Umbraco.Field("metaKeywords")">
-    <meta name="author" content="@Umbraco.Field("author") @DateTime.Now.ToString("yyyy")">
-    <link rel="shortcut icon" href="~/Media/favicon.ico" type="image/x-icon">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="@Umbraco.Field("metaDescription")">
+        <meta name="keywords" content="@Umbraco.Field("metaKeywords")">
+        <meta name="author" content="@Umbraco.Field("author") @DateTime.Now.ToString("yyyy")">
+        <link rel="shortcut icon" href="~/Media/favicon.ico" type="image/x-icon">
 
 
 
-    <title>@Umbraco.Field("pageName")</title>
+        <title>@Umbraco.Field("pageName")</title>
 
-    <!--CSS-->
-    <link href="~/Content/device-mockups.min.css" rel="stylesheet" />
-    <link href="~/Content/style.css" rel="stylesheet" />
-    <link href="~/Content/uikit.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.css" rel="stylesheet" />
-    <link href="~/Content/coding.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
-<body>
+        <!--CSS-->
+        <link href="~/Content/device-mockups.min.css" rel="stylesheet" />
+        <link href="~/Content/style.css" rel="stylesheet" />
+        <link href="~/Content/uikit.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.css" rel="stylesheet" />
+        <link href="~/Content/coding.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    </head>
+    <body>
 
-    <a class="uk-overlay-panel uk-position-top-right uk-icon w " uk-sticky="top" uk-icon="icon: menu; ratio: 2" href="#menu-modal" uk-toggle>
+        <a class="uk-overlay-panel uk-position-top-right uk-icon w " id="foo" uk-sticky="top" uk-icon="icon: menu; ratio: 2" href="#menu-modal" uk-toggle>
 
-    </a>
-    @Html.Partial("modal")
+        </a>
+        @Html.Partial("modal")
 
-    <div id="fullpage">
-        <div class="section" data-anchor="section-1" id="section-1">
-            <div class="uk-visible@m">@Html.Partial("section1")</div>
-            <div class="uk-hidden@m">@Html.Partial("section1-tablet")</div>
+        <div id="fullpage">
+            <div class="section" data-anchor="section-1" id="section-1">
+                <div class="uk-visible@m">@Html.Partial("section1")</div>
+                <div class="uk-hidden@m">@Html.Partial("section1-tablet")</div>
 
-        </div>
-        <div class="section " data-anchor="section-2">
-            <div class="uk-visible@m">
-                @Html.Partial("section2")
             </div>
-            <div class="uk-hidden@m">
-                @Html.Partial("section2-tablet - Copy")
+            <div class="section " data-anchor="section-2">
+                <div class="uk-visible@m">
+                    @Html.Partial("section2")
+                </div>
+                <div class="uk-hidden@m">
+                    @Html.Partial("section2-tablet - Copy")
+                </div>
+            </div>
+
+            <div class="section" data-anchor="section-3">
+                @Umbraco.RenderMacro("projectListing")
+            </div>
+            <div class="section">
+                @Umbraco.RenderMacro("contactSec")
+                @Html.Partial("modal_form")
             </div>
         </div>
 
-        <div class="section" data-anchor="section-3">
-            @Umbraco.RenderMacro("projectListing")
-        </div>
-    </div>
 
 
+        <script src="~/Scripts/uikit.js"></script>
+        <script src="~/Scripts/uikit-icons.js"></script>
+        <script src="~/Scripts/jquery-3.0.0.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/jquery.easings.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/scrolloverflow.js"></script>
+        <script src="~/Scripts/scrolloverflow.js"></script>
 
-    <script src="~/Scripts/uikit.js"></script>
-    <script src="~/Scripts/uikit-icons.js"></script>
-    <script src="~/Scripts/jquery-3.0.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/jquery.easings.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/vendors/scrolloverflow.js"></script>
-    <script src="~/Scripts/scrolloverflow.js"></script>
-    <script src="~/Scripts/initializer.js"></script>
-    <script src="~/Scripts/particles.min.js"></script>
+        <script src="~/Scripts/initializer.js"></script>
+        <script src="~/Scripts/particles.min.js"></script>
 
 
 
 
-</body>
+    </body>
 
 </html>

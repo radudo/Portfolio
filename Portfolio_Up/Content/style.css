@@ -85,6 +85,9 @@ uk-overlay-panel.uk-position-center.uk-light{
 .w{
     color:white !important;
 }
+.wh{
+    color:white !important;
+}
 .w h3{
     color: white !important;
 }
@@ -110,15 +113,16 @@ uk-overlay-panel.uk-position-center.uk-light{
     color:white !important;
 }
 .uk-overlay-panel.uk-position-top-right.uk-icon.w.uk-sticky.uk-sticky-fixed {
-    color: white !important;
+    color: white ;
     width: 45px !important;
     top: 10px !important;
     right: 10px !important;
 }
-
-
-#b{
-    overflow:hidden;
+#scm li a {
+    color: #fd0025 !important;
+}
+#b {
+    overflow: hidden;
 }
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
     background: white !important;
@@ -194,6 +198,7 @@ uk-overlay-panel.uk-position-center.uk-light{
         border-top-left-radius: 3px;
         border-bottom-left-radius: 3px;
     }
+ 
 
 .skillbar-bar {
     height: 20px;
@@ -215,7 +220,7 @@ uk-overlay-panel.uk-position-center.uk-light{
     color: rgba(0, 0, 0, 0.4);
 }
 
-/*Css Animation*/
+/*Css Animation Projects*/
 
 .overlay {
     position: absolute;
@@ -253,3 +258,94 @@ uk-overlay-panel.uk-position-center.uk-light{
     text-align: center;
 }
 
+/*Contact Animation*/
+.Object, .ObjectContainer a {
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -ms-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+
+.ObjectContainer {
+    width: 400px !important;
+    height: 400px !important;
+    
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+    .ObjectContainer .Object {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .ObjectContainer h5 {
+        position: absolute;
+        bottom: 50%;
+        left: 0;
+        opacity: 1;
+        color: #fd0025;
+        width: 100%;
+        line-height: 0px;
+        text-align: center;
+        vertical-align: middle;
+        font-family: Playfair Display;
+        font-size: 18px;
+        line-height: 28px;
+        
+    }
+.r {
+     color: #fd0025!important;
+}
+    .ObjectContainer h2 {
+        position: absolute;
+        bottom: 40%;
+        left: 0;
+        opacity: 1;
+        color: #fd0025!important;
+        width: 100%;
+        line-height: 0px;
+        text-align: center;
+        vertical-align: middle;
+        font-family: Montserrat;
+        letter-spacing: -1px;
+        font-size: 50px;
+        line-height: 50px;
+        font-weight: 700;
+    }
+
+    .ObjectContainer a {
+        position: absolute;
+        bottom: 50%;
+        left: 0;
+        opacity: 1;
+        color: #fd0025;
+        width: 100%;
+        line-height: 0px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .ObjectContainer:hover .Object {
+        margin: 2.5%;
+        height: 95%;
+        width: 95%;
+        border-radius: 200px !important;
+        /* -webkit-transform: rotate(100deg);
+            -moz-transform: rotate(100deg);
+            -ms-transform: rotate(100deg);
+            -o-transform: rotate(100deg);
+            transform: rotate(100deg); */
+    }
+
+
+#red.Object {
+
+    border: 10px solid #fd0025;
+}
+
+#form-modal .uk-modal-dialog {
+    /*background: #fd0025 !important;*/
+}

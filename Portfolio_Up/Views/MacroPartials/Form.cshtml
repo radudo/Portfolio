@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+<div class="uk-fieldset ">
+    @if (TempData["ContactSuccess"] != null && (bool)TempData["ContactSuccess"])
+    {
+    <h2 class="uk-heading-primary uk-position-center">Thank you for your Message!<br />
+    I will get back to you as soon as possible 
+    </h2>
+        
+    }
+    else
+    {
+        Html.RenderAction("RenderForm", "ContactSurface", new {@class="uk-position-center"});
+    }
+</div>
