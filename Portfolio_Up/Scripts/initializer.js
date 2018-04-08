@@ -12,6 +12,7 @@
         recordHistory: true,
         setLocAnchors: true,
         scrollOverflow: true,
+        continuousVertical: true,
 
         afterLoad: function (anchorLink, index) {
             var loadedSection = $(this);

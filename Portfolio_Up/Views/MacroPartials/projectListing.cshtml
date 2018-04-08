@@ -7,9 +7,27 @@
 @using Umbraco.Web.Controllers
 @{
 
-    var selection = Umbraco.TypedContentAtRoot().First().Children().Where(x=> x.DocumentTypeAlias == "project");
+    var selection = Model.Content.Children.OfTypes("project");
 }
 
+<style>
+    .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        height: auto;
+    }
+
+        .embed-container iframe, .embed-container object, .embed-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+</style>
 <div class="uk-container uk-position-top">
     <div class="uk-child-width-expand uk-grid-collapse" uk-grid>
         <div></div>
@@ -21,92 +39,48 @@
         @foreach (var project in selection)
         {
 
-            var img = project.GetPropertyValue<IPublishedContent>("image");
-            var bigImage = project.GetPropertyValue<IPublishedContent>("bigImage");
+            var img = Umbraco.Media(project.GetPropertyValue("image").ToString());
+            var bigImg = Umbraco.Media(project.GetPropertyValue("bigImage").ToString());
+            var proImg = Umbraco.Media(project.GetPropertyValue("prototypeImage").ToString());
 
 
 
-            <div>
-                <div class="uk-tile uk-tile-large uk-background-cover" style="background-image: url(' @img.Url');" id="project" alt="@project.GetPropertyValue("title") project image">
-                    <a href="#modal-full" uk-toggle>
-                        <div class="overlay">
-                            <div class="text">@project.GetPropertyValue("title")</div>
-                        </div>
-                    </a>
+
+    <div>
+        <div class="uk-tile uk-tile-large uk-background-cover" style="background-image: url(' @img.Url');" id="project" alt="@project.GetPropertyValue("title") project image">
+            <a href="#modal-full-@project.Id" uk-toggle>
+                <div class="overlay">
+                    <div class="text">@project.Name</div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <div id="modal-full-@project.Id" class="uk-modal-full" uk-modal>
+        <div class="uk-modal-dialog" id="projects">
+            <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+            <div class="uk-grid-collapse uk-child-width-1-2@m uk-flex-middle uk-height-viewport@s" uk-grid>
+                <div class="uk-padding-large uk-height-viewport uk-background-cover" style="background-image: url('@bigImg.Url');" alt="@project.GetPropertyValue("title") portfolio project image">
 
                 </div>
-            </div>
-
-            <div id="modal-full" class="uk-modal-full" uk-modal>
-                <div class="uk-modal-dialog">
-                    <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
-                    <div class="uk-grid-collapse uk-child-width-1-2@m uk-flex-middle uk-height-viewport@s" uk-grid>
-                        <div class="uk-padding-large uk-height-viewport uk-background-cover" style="background-image: url('@*@bigImage.Url*@');" alt="@project.GetPropertyValue("title") portfolio project image">
-
-                        </div>
-                        <div class="uk-padding-large ">
-                            <div class="uk-margin-large-bottom uk-visible@m">
-                                <div class="container">
-                                    <div class="screen monitor ">
-                                        <div class="content uk-background-cover" style="background-image: url('@{project.GetPropertyValue("prototypeImage");} ');">
-
-                                        </div>
-                                        <div class="base">
-                                            <div class="grey-shadow"></div>
-                                            <div class="foot top"></div>
-                                            <div class="foot bottom"></div>
-                                            <div class="shadow"></div>
-                                            <div class="keyboard">
-                                                <div class="btm"></div>
-                                                <ul class="keys">
-                                                    <li></li>
-                                                    <li></li>
-                                                    <li></li>
-                                                    <li></li>
-                                                </ul>
-                                                <div class="shadow"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="laptop">
-                                        <div class="content uk-background-cover" style="background-image: url('@project.GetPropertyValue("prototypeImage")');">
-
-                                        </div>
-                                        <div class="btm"></div>
-                                        <div class="shadow"></div>
-                                    </div>
-                                    <div class="phone">
-                                        <div class="screen">
-                                            <div class="content uk-background-contain" style="background-image: url('@project.GetPropertyValue("prototypeImage").');">
-
-                                            </div>
-                                        </div>
-
-                                        <div class="shadow"></div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <h3 class="lh">@project.GetPropertyValue("title")</h3>
-                            <p>@project.GetPropertyValue("fullDescription")</p>
-                        </div>
+                <div class="uk-padding-large ">
+                    <div class="uk-margin-large-bottom">
+                        <h1 class="lh">@project.GetPropertyValue("title")</h1>
+                        <p>@project.GetPropertyValue("fullDescription")</p>
                     </div>
+                  
                 </div>
             </div>
+        </div>
+    </div>
 
-        }
+}
 
 
 
 
 
     </div>
-    <h1 class="uk-hero-text uk-padding-large uk-margin-auto lh w uk-position-bottom-center uk-position-large ">
-        <span class="highlight" uk-spinner="ratio: 2.5"></span><span class="highlight">Page</span>
-        Under Construction
-
-
-    </h1>
  
 </div>

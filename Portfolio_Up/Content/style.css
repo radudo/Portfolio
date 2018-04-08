@@ -59,12 +59,21 @@ h1 {
     background: -webkit-linear-gradient(#92a1ca, #76c2bd ) !important;
     background: linear-gradient(#92a1ca ,#76c2bd ) !important;
 }
+#projects {
+    background: white !important;
+
+}
 #section-1 {
     background-image: url('../Media/bg.jpeg');
     background-size:cover;
   
 }
-.logo {
+.uk-modal-close-full {
+    background:none !important;
+}
+.uk-close {
+    color:black !important;
+}.logo {
     width: auto;
     max-width: none;
     display: block;
@@ -74,9 +83,9 @@ h1 {
     color: #444;
     font-family: 'Open Sans';
     font-weight: 600;
-    color:white;
-   left:15px !important;
-   top:20px !important;
+    color: white;
+    left: 15px !important;
+    top: 20px !important;
 }
 uk-overlay-panel.uk-position-center.uk-light{
     z-index:999!important;
